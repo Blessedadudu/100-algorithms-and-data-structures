@@ -1,8 +1,3 @@
-
-
-
-// console.log('hello')
-//  
 // Add Border Algorithms
 
 let addBorder = (picture) => {
@@ -32,3 +27,19 @@ let addBorder = (picture) => {
 // The difference between repeat and concat is, repeat is used to form something new over the number of times it is called. while concat is used to join things together
 
 addBorder(['abc', 'cds'])
+
+// End of Border Algorithms
+
+
+// Median Algorithms
+
+let median = (num) => {
+    const isEven = num.length % 2 === 0;
+
+    return isEven ? num[num.length/2 - 1] : num[Math.floor( num.length / 2 )]
+}
+
+console.log(median([2,4,6,7]))
+console.log(median([2,4,6,8,9,1]))
+
+// end of median algorithms
