@@ -3,6 +3,8 @@
 
 // console.log('hello')
 //  
+// Add Border Algorithms
+
 let addBorder = (picture) => {
     const lengthofwall = picture[0].length + 2;
     let wall = ''; 
@@ -27,6 +29,6 @@ let addBorder = (picture) => {
         
 }
 
-
+// The difference between repeat and concat is, repeat is used to form something new over the number of times it is called. while concat is used to join things together
 
 addBorder(['abc', 'cds'])
