@@ -63,7 +63,7 @@ console.log(add('69'))
 // AdjacentElementsProduct
 
 function adjacentElementsProduct (array) {
-    let largestProduct = array[4] * array[5]
+    let largestProduct = array[0] * array[1]
     console.log(largestProduct)
     for (let i = 1; i < array.length -1; i++) {
         let product = array[i] * array[i+1]
