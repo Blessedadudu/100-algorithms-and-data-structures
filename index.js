@@ -48,9 +48,11 @@ console.log(median([2,4,6,8,9,1]))
 // Adding Two Digits
 
 function add(num) {
-    let a = num.toString()
+    let a = num.toString().split('')
     console.log(a)
+
+    return parseInt(a[0]) + parseInt(a[1])
 
 }
 
-add('29')
+console.log(add('29'))
