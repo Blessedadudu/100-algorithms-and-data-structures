@@ -43,3 +43,14 @@ console.log(median([2,4,6,7]))
 console.log(median([2,4,6,8,9,1]))
 
 // end of median algorithms
+
+
+// Adding Two Digits
+
+function add(num) {
+    let a = num.toString()
+    console.log(a)
+
+}
+
+add('29')
