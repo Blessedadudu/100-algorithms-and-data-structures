@@ -14,7 +14,7 @@ let addBorder = (picture) => {
 
     console.log('b', wall, picture[4]);
 
-   for ( i = 1; i < picture.length -1; i ++ ) {
+   for ( let i = 1; i < picture.length -1; i ++ ) {
 
         picture[i] = '*'.concat(picture[i],'*')
         
@@ -59,3 +59,23 @@ console.log(add('49'))
 console.log(add('69'))
 
 // End of adding algorithms
+
+// AdjacentElementsProduct
+
+function adjacentElementsProduct (array) {
+    let largestProduct = array[4] * array[5]
+    console.log(largestProduct)
+    for (let i = 1; i < array.length -1; i++) {
+        let product = array[i] * array[i+1]
+        console.log(product)
+        largestProduct = largestProduct < product ? product : largestProduct;
+
+        console.log(largestProduct)
+       
+    }
+    return largestProduct 
+}
+
+console.log(adjacentElementsProduct ([2, -4, 6, 7, 5, 6, 6]))
+
+
