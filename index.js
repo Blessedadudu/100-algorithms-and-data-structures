@@ -33,10 +33,10 @@ addBorder(['abc', 'cds'])
 
 // Median Algorithms
 
-let median = (num) => {
+const median = (num) => {
     const isEven = num.length % 2 === 0;
 
-    return isEven ? num[num.length/2 - 1] : num[Math.floor( num.length / 2 )]
+    return (isEven ? num[num.length/2 - 1] : num[Math.floor( num.length / 2 )])
 }
 
 console.log(median([2,4,6,7]))
@@ -46,7 +46,6 @@ console.log(median([2,4,6,8,9,1]))
 
 
 // Adding Two Digits
-
 function add(num) {
     let a = num.toString().split('')
     console.log(a)
@@ -56,3 +55,7 @@ function add(num) {
 }
 
 console.log(add('29'))
+console.log(add('49'))
+console.log(add('69'))
+
+// End of adding algorithms
