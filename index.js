@@ -79,3 +79,28 @@ function adjacentElementsProduct (array) {
 console.log(adjacentElementsProduct ([2, -4, 6, 7, 5, 6, 6]))
 
 
+// longest String
+
+const allLongestStrings = (inputArr) => {
+    longestLength = 0;
+
+    const longestWord = [];
+
+    inputArr.forEach(word => {
+        longestLength = longestLength < word.length ? word.length : longestLength 
+
+        console.log(longestLength)
+    })
+
+    inputArr.forEach(word => {
+       word.length === longestLength && longestWord.push(word)
+    })
+
+    return longestWord
+
+}
+
+console.log(allLongestStrings(['ads', 'errt', 'wdww', 'ee', 'tqqq']))
+
+
+// End of Longest string
