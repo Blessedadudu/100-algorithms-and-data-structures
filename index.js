@@ -12,7 +12,7 @@ let addBorder = (picture) => {
     picture.unshift(wall);
     picture.push(wall);
 
-    console.log('b', wall, picture[4]);
+    console.log('b', wall, picture);
 
    for ( let i = 1; i < picture.length -1; i ++ ) {
 
@@ -127,3 +127,25 @@ console.log(almostIncreasingSequence ([ 1,3,2,4]))
 console.log(almostIncreasingSequence ([ 1,1,4,2]))
 console.log(almostIncreasingSequence ([ 1,3,4,2]))
 console.log(almostIncreasingSequence ([ 3,4,2,4]))
+
+
+// Finding duplicate in array 
+
+let arr = [ 1,2,4,5,2,5,6];
+    let map = {};
+    let result = []
+    for (var i = 0; i < arr.length; i++) {
+        let el = arr[i];
+        (map[el]) ? map[el]++ : (map[el] = 1);
+    }
+    for (var key in map) 
+        result.push(key)
+        console.log(result)
+    return result;
+
+
+
+
+// let arr = [ 1,2,4,5,2,5,6];
+// let newItems = [...new Set(arr)];
+// console.log(newItems);
