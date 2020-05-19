@@ -130,22 +130,47 @@ console.log(almostIncreasingSequence ([ 3,4,2,4]))
 
 
 // Finding duplicate in array 
-
-let arr = [ 1,2,4,5,2,5,6];
+function arrr() {
+    let arr = ['sam', 'tope', 'seyi', 'sam', 'tope'];
     let map = {};
     let result = []
     for (var i = 0; i < arr.length; i++) {
         let el = arr[i];
         (map[el]) ? map[el]++ : (map[el] = 1);
+        console.log(map[el])
     }
     for (var key in map) 
         result.push(key)
         console.log(result)
     return result;
 
+}
+arrr()
 
 
 
-// let arr = [ 1,2,4,5,2,5,6];
-// let newItems = [...new Set(arr)];
-// console.log(newItems);
+function duplicateArr (array) {
+    let uniqueArr = [];
+    let found = false;
+    console.log(array.length)
+
+    for( i = 0; i < array.length; i++) {
+        for( let y = 0; y < uniqueArr.length; y++) {
+            if (array[i] === uniqueArr[y]) {
+                found = true
+            }
+        }
+        if(found == false) {
+            uniqueArr.push(array[i])
+        }
+        found = false;
+    }
+    console.log(uniqueArr) 
+}
+
+
+
+duplicateArr ([1,2,3,3,4,5,2,3,5])
+duplicateArr ([ 3,4,2,3,1,4,1])
+duplicateArr (['sam', 'john', 'sam', 'philip', 'john', 'philip'])
+
