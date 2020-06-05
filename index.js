@@ -172,5 +172,21 @@ function duplicateArr (array) {
 
 duplicateArr ([1,2,3,3,4,5,2,3,5])
 duplicateArr ([ 3,4,2,3,1,4,1])
-duplicateArr (['sam', 'john', 'sam', 'philip', 'john', 'philip'])
+duplicateArr (['sam', 'john', 'sam', 'philip', 'john', 'philip']);
+
+// Findin re-occurrence in an array 
+function array(arr) {
+    let int = 1;
+    let count = 0
+   for(let i = 0; i < arr.length; i++ ){
+      if (arr[i] === int) {
+           count ++;
+      }
+  }
+
+
+ return count;  
+}
+
+console.log(array([1,2,3,4,5,1,1,6,1]))
 
