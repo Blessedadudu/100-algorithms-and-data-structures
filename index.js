@@ -190,3 +190,46 @@ function array(arr) {
 
 console.log(array([1,2,3,4,5,1,1,6,1]))
 
+
+// Alphabetic shift algorithm 
+
+
+
+
+// Loop for babes
+
+let arr = (babes) => {
+    let array = [];
+    for(i= 0; i < babes.length; i++) {
+        if (babes[i].peng && babes[i].havesense) {
+            array.push(babes[i])
+        }
+        
+    }
+    return array
+}
+
+let babes = [
+    {
+        babe: 'Ada',
+        peng: true,
+        havesense: true,
+    },
+    {
+        babe: 'Mary',
+        peng: false,
+        havesense: true,
+    },
+    {
+        babe: 'Motun',
+        peng: true,
+        havesense: true,
+    }
+
+]
+   
+    
+    
+
+console.log(arr(babes)) 
+
