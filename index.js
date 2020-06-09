@@ -201,13 +201,14 @@ console.log(array([1,2,3,4,5,1,1,6,1]))
 let arr = (babes) => {
     let array = [];
     for(i= 0; i < babes.length; i++) {
-        if (babes[i].peng && babes[i].havesense) {
-            array.push(babes[i])
-        }
+        (babes[i].peng && babes[i].havesense) && array.push(babes[i]);
         
     }
-    return array
+    console.log(array.length)
+    let a = `Blessed, ${array.length === 0 ? 'Keep searching !' : 'Mad, you found some babes'}`
+    return a
 }
+
 
 let babes = [
     {
@@ -227,9 +228,6 @@ let babes = [
     }
 
 ]
-   
-    
-    
 
 console.log(arr(babes)) 
 
