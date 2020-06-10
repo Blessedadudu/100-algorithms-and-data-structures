@@ -191,21 +191,16 @@ function array(arr) {
 console.log(array([1,2,3,4,5,1,1,6,1]))
 
 
-// Alphabetic shift algorithm 
-
-
-
-
 // Loop for babes
 
 let arr = (babes) => {
     let array = [];
     for(i= 0; i < babes.length; i++) {
-        (babes[i].peng && babes[i].havesense) && array.push(babes[i]);
+        (babes[i].peng &&  babes[i].smart) && array.push(babes[i]);
         
     }
     console.log(array.length)
-    let a = `Blessed, ${array.length === 0 ? 'Keep searching !' : 'Mad, you found some babes'}`
+    let a = `Blessed! ${array.length === 0 ? 'Keep searching !' : 'Nice, you found some babes'}`
     return a
 }
 
@@ -214,20 +209,45 @@ let babes = [
     {
         babe: 'Ada',
         peng: true,
-        havesense: true,
+        smart: true,
     },
     {
         babe: 'Mary',
         peng: false,
-        havesense: true,
+        smart: true,
     },
     {
         babe: 'Motun',
         peng: true,
-        havesense: true,
+        smart: true,
     }
 
 ]
 
 console.log(arr(babes)) 
+
+
+// Alphabetic shift algorithm 
+let alphabeticshift = (inputString) => {
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    alphabet = alphabet.split('');
+    console.log(alphabet)
+    inputShifted = inputString.split('')
+    
+    for(let i = 0; i < inputShifted.length; i++ ){
+        if(inputShifted[i] !== 'z') {
+            index = alphabet.indexOf(inputShifted[i]) + 1;
+        }
+
+        inputShifted[i] = alphabet[index];        
+    }
+
+    return inputShifted.join('')
+    
+
+
+
+}
+
+console.log(alphabeticshift('correct'))
 
