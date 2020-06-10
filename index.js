@@ -243,11 +243,38 @@ let alphabeticshift = (inputString) => {
     }
 
     return inputShifted.join('')
-    
-
-
-
 }
 
 console.log(alphabeticshift('correct'))
+
+
+let alphabeticSubSequence = (s) => {
+    const chars = s.split('');
+    const charValues = [];
+
+    chars.forEach(char => {
+        charValues.push(char.charCodeAt(0))
+    })
+
+    if (new Set(charValues).size !== chars.length ) {
+        return false;
+    }
+    
+    for(let i = 0; i < charValues.length - 1; i++ ){
+        if(charValues[i] >= charValues[i + 1]) {
+            return false
+        }       
+    }
+
+    return true
+}
+
+console.log(alphabeticSubSequence('zab'))
+console.log(alphabeticSubSequence('del'))
+console.log(alphabeticSubSequence('effg'))
+console.log(alphabeticSubSequence('abcdj'))
+
+
+
+
 
