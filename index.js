@@ -293,5 +293,23 @@ console.log(solution([-1,-3]))
 console.log(solution([1,3,2,6,5]))
 
 
+function alternatingSum(array) {
+    let evenSum = 0;
+    let oddSum = 0;
 
+    array.forEach((element, index) =>{
+        if(index % 2 === 0) {
+            evenSum += element
+        } else {
+            oddSum += element
+        }
+    })
+
+
+    return [evenSum, oddSum]
+}
+
+console.log(alternatingSum([40,30,10,50,60]))
+console.log(alternatingSum([40,10,50,90]))
+console.log(alternatingSum([20,60, 5, 100]))
 
