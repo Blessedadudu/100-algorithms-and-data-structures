@@ -259,7 +259,7 @@ let alphabeticSubSequence = (s) => {
     if (new Set(charValues).size !== chars.length ) {
         return false;
     }
-    
+
     for(let i = 0; i < charValues.length - 1; i++ ){
         if(charValues[i] >= charValues[i + 1]) {
             return false
@@ -274,6 +274,23 @@ console.log(alphabeticSubSequence('del'))
 console.log(alphabeticSubSequence('effg'))
 console.log(alphabeticSubSequence('abcdj'))
 
+function solution(A) {
+
+    let sorted = A.sort();
+    let max = sorted[sorted.length-1];
+    let r = 1;
+
+    for(let i=1; i <= (max + 1); i++) {
+        r  = A.includes(i) ? 1 : i ;
+        if(r>1) break;
+    }
+
+    return r;
+}
+
+console.log(solution([1,3,2,6,5]))
+console.log(solution([-1,-3]))
+console.log(solution([1,3,2,6,5]))
 
 
 
