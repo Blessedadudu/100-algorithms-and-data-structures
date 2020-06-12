@@ -313,3 +313,18 @@ console.log(alternatingSum([40,30,10,50,60]))
 console.log(alternatingSum([40,10,50,90]))
 console.log(alternatingSum([20,60, 5, 100]))
 
+// Are Equally strong
+
+const equallyStrong = (yourLeft, yourRight, friendsLeft, friendsRight) => {
+    const yourWeakest = yourLeft <= yourRight ? yourLeft : yourRight;
+    const yourStrongest = yourLeft >= yourRight ? yourLeft : yourRight;
+
+    const friendsWeakest = friendsLeft <= friendsRight ? friendsLeft : friendsRight;
+    const friendsStrongest = friendsLeft >= friendsRight ? friendsLeft : friendsRight;
+
+    return yourStrongest === friendsStrongest && yourWeakest === friendsWeakest
+}
+
+console.log(equallyStrong(10,15,10,15))
+console.log(equallyStrong(20,30,10,15))
+console.log(equallyStrong(5,12,5,12))
