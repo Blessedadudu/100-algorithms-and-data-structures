@@ -8,10 +8,9 @@ let addBorder = (picture) => {
         wall = wall.concat('*')
     }
 //     console.log('a', wall);
-
     picture.unshift(wall);
     picture.push(wall);
-
+    
     console.log('b', wall, picture);
 
    for ( let i = 1; i < picture.length -1; i ++ ) {
@@ -139,13 +138,14 @@ function arrr() {
         (map[el]) ? map[el]++ : (map[el] = 1);
         console.log(map[el])
     }
-    for (var key in map) 
+    for (var key in map) {
         result.push(key)
-        console.log(result)
+    }
+    console.log(result)
     return result;
 
 }
-arrr()
+console.log(arrr([1,2,1,3,4]))
 
 
 
@@ -164,15 +164,16 @@ function duplicateArr (array) {
             uniqueArr.push(array[i])
         }
         found = false;
+        
     }
     console.log(uniqueArr) 
 }
 
-
-
 duplicateArr ([1,2,3,3,4,5,2,3,5])
 duplicateArr ([ 3,4,2,3,1,4,1])
 duplicateArr (['sam', 'john', 'sam', 'philip', 'john', 'philip']);
+
+
 
 // Findin re-occurrence in an array 
 function array(arr) {
@@ -328,3 +329,26 @@ const equallyStrong = (yourLeft, yourRight, friendsLeft, friendsRight) => {
 console.log(equallyStrong(10,15,10,15))
 console.log(equallyStrong(20,30,10,15))
 console.log(equallyStrong(5,12,5,12))
+
+
+// let newArray = () => {
+    
+// }
+
+// newArray([1,2,2,3,4,1,5,1,2,3])
+
+function areSimilar(a,b) {
+    let A = a.sort().toString()
+    let B = b.sort().toString()
+    
+    if (A === B) {
+        return true;
+    }
+
+    return false
+}
+
+console.log(areSimilar([1,2,3], [1,2,3]))
+console.log(areSimilar([1,2,3], [2,2,3]))
+console.log(areSimilar([2,1,3,4], [1,4,2,3]))
+console.log(areSimilar([1,2,3,5,4], [1,2,3]))
