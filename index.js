@@ -352,3 +352,21 @@ console.log(areSimilar([1,2,3], [1,2,3]))
 console.log(areSimilar([1,2,3], [2,2,3]))
 console.log(areSimilar([2,1,3,4], [1,4,2,3]))
 console.log(areSimilar([1,2,3,5,4], [1,2,3]))
+
+
+
+let arrayChange = (inputArr) => {
+    let count = 0;
+    for(let i = 0; i < inputArr.length; i++ ){
+        if(inputArr[i] >= inputArr[i + 1]){
+            const difference = (inputArr[i] + 1) - inputArr[i+1];
+            inputArr[i+1] = inputArr[i] + 1;
+            count += difference
+        }      
+    }
+
+    return count
+}
+
+console.log(arrayChange([1,1,1]))
+console.log(arrayChange([4,3,2]))
