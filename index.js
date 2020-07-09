@@ -34,12 +34,15 @@ addBorder(['abc', 'cds'])
 
 const median = (num) => {
     const isEven = num.length % 2 === 0;
+    console.log(num.length % 2)
 
     return (isEven ? num[num.length/2 - 1] : num[Math.floor( num.length / 2 )])
 }
 
 console.log(median([2,4,6,7]))
 console.log(median([2,4,6,8,9,1]))
+console.log(median([2,3,4,6,8,9,1]))
+
 
 // end of median algorithms
 
@@ -68,10 +71,9 @@ function adjacentElementsProduct (array) {
         let product = array[i] * array[i+1]
         console.log(product)
         largestProduct = largestProduct < product ? product : largestProduct;
-
-        console.log(largestProduct)
-       
     }
+    
+    console.log(largestProduct)
     return largestProduct 
 }
 
@@ -87,9 +89,8 @@ const allLongestStrings = (inputArr) => {
 
     inputArr.forEach(word => {
         longestLength = longestLength < word.length ? word.length : longestLength 
-
-        console.log(longestLength)
     })
+    console.log(longestLength)
 
     inputArr.forEach(word => {
        word.length === longestLength && longestWord.push(word)
@@ -129,13 +130,12 @@ console.log(almostIncreasingSequence ([ 3,4,2,4]))
 
 
 // Finding duplicate in array 
-function arrr() {
-    let arr = ['sam', 'tope', 'seyi', 'sam', 'tope'];
+function arrr(arr) {
     let map = {};
     let result = []
     for (var i = 0; i < arr.length; i++) {
         let el = arr[i];
-        (map[el]) ? map[el]++ : (map[el] = 1);
+        (map[el] === arr[i]) ? map[el]++ : (map[el] = 1);
         console.log(map[el])
     }
     for (var key in map) {
@@ -146,6 +146,7 @@ function arrr() {
 
 }
 console.log(arrr([1,2,1,3,4]))
+console.log(arrr(['sam', 'tope', 'seyi', 'sam', 'tope']))
 
 
 
@@ -160,7 +161,7 @@ function duplicateArr (array) {
                 found = true
             }
         }
-        if(found == false) {
+        if(found === false) {
             uniqueArr.push(array[i])
         }
         found = false;
@@ -331,12 +332,6 @@ console.log(equallyStrong(20,30,10,15))
 console.log(equallyStrong(5,12,5,12))
 
 
-// let newArray = () => {
-    
-// }
-
-// newArray([1,2,2,3,4,1,5,1,2,3])
-
 function areSimilar(a,b) {
     let A = a.sort().toString()
     let B = b.sort().toString()
@@ -369,4 +364,3 @@ let arrayChange = (inputArr) => {
 }
 
 console.log(arrayChange([1,1,1]))
-console.log(arrayChange([4,3,2]))
