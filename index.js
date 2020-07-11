@@ -364,3 +364,12 @@ let arrayChange = (inputArr) => {
 }
 
 console.log(arrayChange([1,1,1]))
+
+
+
+let count = 0;
+while(count <= 10) {
+  if (count > 0 ) continue;
+  console.log(count)
+  count += 1;
+}
