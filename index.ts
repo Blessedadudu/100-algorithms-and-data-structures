@@ -14,8 +14,22 @@ console.log(median([2,3,4,6,8,9,1]))
 const add = (num1: number, num2: number): number => {
     return num1 + num2
 }
+const add2 = (...args: number[]): number => {
+    let total: number = 0;
+    // console.log(a)
+    args.forEach(each => {
+        total += each
+    })
+    return total
+}
 
 console.log(add(1,3))
+console.log(add2(1,3,5,6,3))
+console.log(add2(1,3,5))
+
+
+// 
+
 
 // end of median algorithms
 
